@@ -27,17 +27,7 @@ Table of Contents
 
 The "g" key is pressed
 ----------------------
-The following sections explain the physical keyboard actions
-and the OS interrupts. When you press the key "g" the browser receives the
-event and the auto-complete functions kick in.
-Depending on your browser's algorithm and if you are in
-private/incognito mode or not various suggestions will be presented
-to you in the dropdown below the URL bar. Most of these algorithms sort
-and prioritize results based on search history, bookmarks, cookies, and
-popular searches from the internet as a whole. As you are typing
-"google.com" many blocks of code run and the suggestions will be refined
-with each keypress. It may even suggest "google.com" before you finish typing
-it.
+The process initiates when the user presses the "g" key on the keyboard. This action triggers a series of events that are crucial for the browser to understand and respond to the user's intent. The browser, upon receiving the keypress event, engages auto-complete functions, suggesting relevant URLs based on the user's browsing history, bookmarks, cookies, and popular internet searches. These suggestions continually refine as the user types, with the possibility of the browser anticipating and suggesting "google.com" before the full input.
 
 The "enter" key bottoms out
 ---------------------------
@@ -174,14 +164,12 @@ Parse URL
     - ``Resource``  "/"
         Retrieve main (index) page
 
+After the "enter" key is pressed, the browser parses the entered text as a URL. It identifies the protocol (e.g., "http"), interprets the URL structure, and distinguishes between valid URLs and search terms. The hostname, in this case, "google.com," is extracted for further processing.
 
 Is it a URL or a search term?
 -----------------------------
 
-When no protocol or valid domain name is given the browser proceeds to feed
-the text given in the address box to the browser's default web search engine.
-In many cases the URL has a special piece of text appended to it to tell the
-search engine that it came from a particular browser's URL bar.
+If the browser identifies a valid protocol and domain name, it proceeds to treat the input as a URL. However, if the input lacks a valid protocol or domain, the browser interprets it as a search term. The text is then passed to the default search engine, often with additional information indicating its origin from a browser's address bar.
 
 Convert non-ASCII Unicode characters in the hostname
 ------------------------------------------------
